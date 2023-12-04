@@ -1,0 +1,41 @@
+.home {
+    background-color: rgb(235, 196, 154);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homeContent{
+    padding-top: 50px;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homeAbout {
+    display: flex;
+    flex-direction: column;
+}
+
+.homeImage{
+    border-radius: 20px;
+    height: 400px;
+    background-color: bisque;
+    width: 40%;
+}
+
+.homeButtons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.homeButton{
+    border: none;
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
