@@ -1,4 +1,5 @@
 import '../styles/Header.css'
+import { Link } from 'react-router-dom';
 
 function Header(){
     return(
@@ -13,7 +14,9 @@ function Header(){
                     </ul>
                 </nav>
                 <div className="loginCreate">
-                    <p>Login</p>
+                <Link to="/Menu">
+                <p>Login</p>
+                        </Link>
                     <button className='headerButton' >Create menu</button>
                 </div>
             </div>

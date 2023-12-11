@@ -1,0 +1,116 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(237, 237, 237);
+    height: 100vh;
+}
+
+.menuContent {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+}
+.menuButton {
+    background-color: white;
+    margin-right: 10px;
+    font-size: 20px;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+
+.editPlace {
+    display: flex;
+    flex-direction: column;
+}
+
+.addPlace {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    width: 20%;
+    padding: 20px;
+}
+
+.editButton {
+    background-color: orangered;
+    padding: 10px 0px;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.editProfil {
+    display: flex;
+    flex-direction: column;
+} 
+
+.editProfilContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.userData {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 45%;
+
+}
+
+.changePassword {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 45%;
+}
+
+.profilForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.profilInput {
+    background-color: rgb(226, 226, 226);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.profilButton {
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: fit-content;
+}
+
+.logoutButton {
+    margin-top: 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: fit-content;
+    align-self: flex-end;
+}
+
+.help {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 20px;
+    width: 40%;
+    padding: 20px;
+}
