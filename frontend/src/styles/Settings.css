@@ -1,0 +1,105 @@
+.settingsMain {
+    width: 100%;
+    display: flex;
+    background-color: rgb(232, 232, 232);
+}
+
+.settings {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.settingsNav {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: white;
+    margin-right: 20px;
+}
+
+.settingsNavUl {
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.settingsNavUl li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.settingsNavUl li:hover {
+    background-color: rgb(223, 223, 223);
+}
+
+.editMenuButton {
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
+
+.settingsContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.settingsEditPlace {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.settingsEditPlace p {
+    margin: 0;
+}
+
+.settingsComponents {
+    width: 100%;
+}
+
+.settingsComponentsContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.add-ons {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+.settingsComponentsEdit {
+    align-self: flex-end;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    padding: 5px 10px;
+}
