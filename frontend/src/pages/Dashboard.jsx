@@ -1,26 +1,31 @@
 import Header from '../componants/Header';
-import '../styles/Menu.css'
+import '../styles/Dashboard.css'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-function Menu(){
+function Dashboard(){
 
     const [showEditPlace, setShowEditPlace] = useState(true);
   const [showEditProfil, setShowEditProfil] = useState(false);
 
-  const toggleDisplay = () => {
-    setShowEditPlace(!showEditPlace);
-    setShowEditProfil(!showEditProfil);
+  const toggleDisplay = (section) => {
+    if (section === 'place') {
+      setShowEditPlace(true);
+      setShowEditProfil(false);
+    } else if (section === 'profil') {
+      setShowEditPlace(false);
+      setShowEditProfil(true);
+    }
   };
 
     return(
-        <div className="menu">
+        <div className="dashboard">
                         <Header />
-            <div className="menuContent">
+            <div className="dashboardContent">
                 <div className='placeProfil'>
-                    <button className='menuButton' onClick={toggleDisplay}>Place</button>
-                    <button className='menuButton' onClick={toggleDisplay}>Profil</button>
+                    <button className='dashboardButton' onClick={() => toggleDisplay('place')}>Place</button>
+                    <button className='dashboardButton' onClick={() => toggleDisplay('profil')}>Profil</button>
                 </div>
                 <div className='edit'>
                 {showEditPlace && (
@@ -75,4 +80,4 @@ function Menu(){
     )
 }
 
-export default Menu;
+export default Dashboard;

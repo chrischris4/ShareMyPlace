@@ -23,7 +23,7 @@
 .homeImage{
     border-radius: 20px;
     height: 400px;
-    background-color: bisque;
+    background-color: white;
     width: 40%;
 }
 
@@ -34,8 +34,36 @@
 
 .homeButton{
     border: none;
-    background-color: orangered;
+    background-color: rgb(255, 102, 0);
     color: white;
     border-radius: 5px;
     padding: 5px 10px;
+}
+
+.signUp {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    width: 30%;
+    background-color: white;
+}
+
+.signUp form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signUpPlace {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    width: 30%;
+    background-color: white;
+}
+
+.signUpPlace form {
+    display: flex;
+    flex-direction: column;
 }

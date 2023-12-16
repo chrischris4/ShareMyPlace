@@ -1,17 +1,18 @@
-.menu {
+.dashboard {
     display: flex;
     flex-direction: column;
     background-color: rgb(237, 237, 237);
-    height: 100vh;
 }
 
-.menuContent {
+.dashboardContent {
     display: flex;
     flex-direction: column;
     width: 70%;
     margin: auto;
+    margin-top: 50px;
 }
-.menuButton {
+.dashboardButton {
+    cursor: pointer;
     background-color: white;
     margin-right: 10px;
     font-size: 20px;

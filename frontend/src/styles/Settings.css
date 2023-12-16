@@ -34,6 +34,7 @@
 }
 
 .settingsNavUl li {
+    cursor: pointer;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -90,7 +91,7 @@
     background-color: white;
     padding: 20px;
     border-radius: 20px;
-    width: 45%;
+    width: 44%;
     margin-bottom: 20px;
 }
 
