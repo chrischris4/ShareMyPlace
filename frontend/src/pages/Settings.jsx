@@ -101,26 +101,22 @@ function Settings() {
           )}
           {showQRcode && (
             <div className="settingsQRcode">
-              <h1>QR code</h1>
-              {/* QR code content goes here */}
+              <h2>QR code</h2>
             </div>
           )}
           {showTeam && (
             <div className="settingsTeam">
-              <h1>Team</h1>
-              {/* Team content goes here */}
+              <h2>Team</h2>
             </div>
           )}
           {showBilling && (
             <div className="settingsBilling">
-              <h1>Billing</h1>
-              {/* Billing content goes here */}
+              <h2>Billing</h2>
             </div>
           )}
           {showSupport && (
             <div className="settingsSupport">
-              <h1>Support</h1>
-              {/* Support content goes here */}
+              <h2>Support</h2>
             </div>
           )}
         </div>

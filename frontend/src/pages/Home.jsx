@@ -1,8 +1,12 @@
 import Header from '../componants/Header';
 import { useState } from 'react';
 import '../styles/Home.css'
+import { useTranslation } from 'react-i18next';
+
 
 function Home(){
+    const { t } = useTranslation();
+
     const [showSignUp, setShowSignUp] = useState(false);
     const [showSignUpPlace, setShowSignUpPlace] = useState(false);
   
@@ -10,6 +14,10 @@ function Home(){
       setShowSignUp(!showSignUp);
       setShowSignUpPlace(false);
     };
+    const showSignUpPlaceSection = () => {
+        setShowSignUpPlace(!showSignUpPlace);
+        setShowSignUp(false);
+      };
     return(
         <div className="home">
                         <Header />
@@ -24,7 +32,7 @@ function Home(){
                                     <label htmlFor="">Password</label>
                                     <input type="text" />
                                     <input type="checkbox" />
-                                    <button className='signUpButton'>Add your place</button>
+                                    <button type='button' className='signUpButton' onClick={showSignUpPlaceSection}>Add your place</button>
                                 </form>
                             </div>
                         </div>
@@ -38,11 +46,23 @@ function Home(){
                                     <input type="text" />
                                     <p>shareyourplace.com/p/blebleble</p>
                                     <label htmlFor="">Place type</label>
-                                    <input type="text" />
+                                    <select>
+                                        <option value=""></option>
+                                        <option value="restaurant">Restaurant</option>
+                                        <option value="market">Market</option>
+                                    </select>
                                     <label htmlFor="">Currency</label>
-                                    <input type="text" />
+                                    <select>
+                                        <option value=""></option>
+                                        <option value="euro">€</option>
+                                        <option value="dollar">$</option>
+                                    </select>
                                     <label htmlFor="">Main language</label>
-                                    <input type="text" />
+                                    <select>
+                                        <option value=""></option>
+                                        <option value="fr">Francais</option>
+                                        <option value="en">English</option>
+                                    </select>
                                     <button className='addPlaceButton'>Create Place</button>
                                 </form>
                             </div>
@@ -52,7 +72,7 @@ function Home(){
                     <h1>
                         QR Code Menu,
                     </h1>
-                    <p>that works for you</p>
+                    <p>{t('homeTitle')}</p>
                     <div className="homeButtons">
                         <button className="homeButton" onClick={showSignUpSection}>Menu example</button>
                         <button className="homeButton">Create QR menu</button>
