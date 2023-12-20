@@ -29,10 +29,10 @@
 
 .homeButtons{
     display: flex;
-    justify-content: space-between;
 }
 
 .homeButton{
+    margin-right: 20px;
     border: none;
     background-color: rgb(255, 102, 0);
     color: white;

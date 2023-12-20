@@ -15,6 +15,7 @@ code {
 }
 
 a {
+  display: flex;
   text-decoration: none;
   color: inherit;
 }
@@ -35,6 +36,16 @@ select {
   margin-bottom: 20px;
 }
 
+option {
+  border-radius: 5px;
+  width: 10%;
+}
+
 button {
   cursor: pointer;
+}
+
+.settingsIcon {
+  font-size: 35px;
+  margin-left: 10px;
 }

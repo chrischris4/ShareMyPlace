@@ -2,9 +2,12 @@ import Header from '../componants/Header';
 import '../styles/Dashboard.css'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 
 
 function Dashboard(){
+    const { t } = useTranslation();
 
     const [showEditPlace, setShowEditPlace] = useState(true);
   const [showEditProfil, setShowEditProfil] = useState(false);
@@ -24,53 +27,57 @@ function Dashboard(){
                         <Header />
             <div className="dashboardContent">
                 <div className='placeProfil'>
-                    <button className='dashboardButton' onClick={() => toggleDisplay('place')}>Place</button>
-                    <button className='dashboardButton' onClick={() => toggleDisplay('profil')}>Profil</button>
+                    <button className='dashboardButton' onClick={() => toggleDisplay('place')}>{t('dashboardPlace')}</button>
+                    <button className='dashboardButton' onClick={() => toggleDisplay('profil')}>{t('dashboardProfil')}</button>
                 </div>
                 <div className='edit'>
                 {showEditPlace && (
                     <div className='editPlace'>
-                        <h1>Establishement <Link to="/Settings">
-                            X
+                        <div className='editPlaceTitle'>
+                        <h1>{t('dashboardPlaceTitle')}</h1>
+                        <Link to="/Settings">
+                            <span className="material-symbols-outlined settingsIcon">
+                                settings
+                            </span>
                         </Link>
-                        </h1>
+                        </div>
                             <div className='addPlace'>
                                 <h2>PlaceTitle</h2>
                                 <p>linktotheplace</p>
-                                <button className='editButton'>Edit menu</button>
+                                <button className='editButton'>{t('dashboardPlaceButton')}</button>
                             </div>
                                 <div className='help'>
-                                    <p>If you need help, please let us know.</p>
-                                    <p>Our contacts :</p>
+                                    <p>{t('dashboardPlaceHelp')}</p>
+                                    <p>{t('dashboardPlaceContact')}</p>
                                 </div>
                     </div>
                 )}
                           {showEditProfil && (
                     <div className='editProfil'>
-                        <h1>Profile</h1>
+                        <h1>{t('dashboardProfilTitle')}</h1>
                         <div className='editProfilContent'>
                             <div className='userData'>
-                                <h2>User's data</h2>
+                                <h2>{t('dashboardProfilUserData')}</h2>
                                 <form className='profilForm' action="">
-                                    <label htmlFor="">Name</label>
+                                    <label htmlFor="">{t('dashboardProfilUserName')}</label>
                                     <input className='profilInput' type="text" />
-                                    <label htmlFor="">Email</label>
+                                    <label htmlFor="">{t('dashboardProfilUserMail')}</label>
                                     <input className='profilInput' type="text" />
-                                    <button className='profilButton' type='submit'>Save changes</button>
+                                    <button className='profilButton' type='submit'>{t('dashboardProfilUserButton')}</button>
                                 </form>
                             </div>
                             <div className='changePassword'>
-                                <h2>Change password</h2>
+                                <h2>{t('dashboardProfilPassword')}</h2>
                                 <form className='profilForm' action="">
-                                    <label htmlFor="">New password</label>
+                                    <label htmlFor="">{t('dashboardProfilPasswordNew')}</label>
                                     <input className='profilInput' type="text" />
-                                    <label htmlFor="">Repeat new password</label>
+                                    <label htmlFor="">{t('dashboardProfilPasswordNewRepeat')}</label>
                                     <input className='profilInput' type="text" />
-                                    <button className='profilButton' type='submit'>Change password</button>
+                                    <button className='profilButton' type='submit'>{t('dashboardProfilPasswordButton')}</button>
                                 </form>
                             </div>
                         </div>
-                            <button className='logoutButton' >Logout</button>
+                            <button className='logoutButton' >{t('dashboardProfilLogout')}</button>
                             Footer?
                     </div>
                           )}

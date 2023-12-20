@@ -12,6 +12,7 @@
     margin: auto;
     margin-top: 50px;
 }
+
 .dashboardButton {
     cursor: pointer;
     background-color: white;
@@ -22,10 +23,14 @@
     border-radius: 10px;
 }
 
-
 .editPlace {
     display: flex;
     flex-direction: column;
+}
+
+.editPlaceTitle {
+    display: flex;
+    align-items: center;
 }
 
 .addPlace {

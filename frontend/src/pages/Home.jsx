@@ -23,59 +23,57 @@ function Home(){
                         <Header />
                         <div className='signUp' style={{ display: showSignUp ? 'flex' : 'none' }}>
                             <div className='signUpContent'>
-                                <h2>Sign Up</h2>
+                                <h2>{t('signUpTitle')}</h2>
                                 <form action="">
-                                    <label htmlFor="">Your name</label>
+                                    <label htmlFor="">{t('signUpName')}</label>
                                     <input type="text" />
-                                    <label htmlFor="">Email</label>
+                                    <label htmlFor="">{t('signUpMail')}</label>
                                     <input type="text" />
-                                    <label htmlFor="">Password</label>
+                                    <label htmlFor="">{t('signUpPassword')}</label>
                                     <input type="text" />
                                     <input type="checkbox" />
-                                    <button type='button' className='signUpButton' onClick={showSignUpPlaceSection}>Add your place</button>
+                                    <button type='button' className='signUpButton' onClick={showSignUpPlaceSection}>{t('signUpButton')}</button>
                                 </form>
                             </div>
                         </div>
                         <div className='signUpPlace' style={{ display: showSignUpPlace ? 'flex' : 'none' }}>
                             <div className='signUpPlaceContent'>
-                                <h2>Add Your Place</h2>
+                                <h2>{t('signUpPlaceTitle')}</h2>
                                 <form action="">
-                                    <label htmlFor="">Place name</label>
-                                    <input type="text" />
-                                    <label htmlFor="">Short name in URL</label>
+                                    <label htmlFor="">{t('signUpPlaceName')}</label>
                                     <input type="text" />
                                     <p>shareyourplace.com/p/blebleble</p>
-                                    <label htmlFor="">Place type</label>
+                                    <label htmlFor="">{t('signUpPlaceType')}</label>
                                     <select>
                                         <option value=""></option>
-                                        <option value="restaurant">Restaurant</option>
-                                        <option value="market">Market</option>
+                                        <option value="restaurant">{t('signUpPlaceTypeRestaurant')}</option>
+                                        <option value="market">{t('signUpPlaceTypeMarket')}</option>
                                     </select>
-                                    <label htmlFor="">Currency</label>
+                                    <label htmlFor="">{t('signUpPlaceCurrency')}</label>
                                     <select>
                                         <option value=""></option>
                                         <option value="euro">€</option>
                                         <option value="dollar">$</option>
                                     </select>
-                                    <label htmlFor="">Main language</label>
+                                    <label htmlFor="">{t('signUpPlaceLanguage')}</label>
                                     <select>
                                         <option value=""></option>
                                         <option value="fr">Francais</option>
                                         <option value="en">English</option>
                                     </select>
-                                    <button className='addPlaceButton'>Create Place</button>
+                                    <button className='addPlaceButton'>{t('signUpPlaceButton')}</button>
                                 </form>
                             </div>
                         </div>
             <div className="homeContent">
                 <div className="homeAbout">
                     <h1>
-                        QR Code Menu,
+                    {t('homeH1')}
                     </h1>
-                    <p>{t('homeTitle')}</p>
+                    <p>{t('homeP')}</p>
                     <div className="homeButtons">
-                        <button className="homeButton" onClick={showSignUpSection}>Menu example</button>
-                        <button className="homeButton">Create QR menu</button>
+                        <button className="homeButton" onClick={showSignUpSection}>{t('homeExempleButton')}</button>
+                        <button className="homeButton">{t('homeQRCodeButton')}</button>
                     </div>
                 </div>
                 <div className="homeImage">
