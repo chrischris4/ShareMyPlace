@@ -33,6 +33,8 @@
 }
 
 .headerButton {
+    display: flex;
+    align-items: center;
     margin-left: 20px;
     height: fit-content;
     border: none;

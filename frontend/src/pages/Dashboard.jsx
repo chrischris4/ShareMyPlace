@@ -44,7 +44,9 @@ function Dashboard(){
                             <div className='addPlace'>
                                 <h2>PlaceTitle</h2>
                                 <p>linktotheplace</p>
-                                <button className='editButton'>{t('dashboardPlaceButton')}</button>
+                                <button className='editMenuButton'>{t('dashboardPlaceButton')}<span className="material-symbols-rounded editIcon">
+edit_square
+</span></button>
                             </div>
                                 <div className='help'>
                                     <p>{t('dashboardPlaceHelp')}</p>

@@ -48,6 +48,10 @@
 }
 
 .editMenuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     background-color: orange;
     color: white;
     border-radius: 10px;

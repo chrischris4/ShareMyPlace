@@ -28,6 +28,10 @@
     flex-direction: column;
 }
 
+.editPlace h2, .editPlace p{
+    margin-top: 0px;
+}
+
 .editPlaceTitle {
     display: flex;
     align-items: center;
@@ -60,6 +64,10 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+}
+
+.editProfilContent h2 {
+    margin-top: 0px;
 }
 
 .userData {

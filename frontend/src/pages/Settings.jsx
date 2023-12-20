@@ -59,7 +59,9 @@ function Settings() {
         <div className="settingsNav">
           <h1>PlaceName</h1>
           <p>CreationDate</p>
-          <button className="editMenuButton">Edit menu</button>
+          <button className="editMenuButton">Edit menu <span className="material-symbols-rounded editIcon">
+edit_square
+</span></button>
           <ul className="settingsNavUl">
             <li onClick={() => handleNavItemClick('Components')}>Components</li>
             <li onClick={() => handleNavItemClick('QRcode')}>QR code</li>
@@ -67,7 +69,9 @@ function Settings() {
             <li onClick={() => handleNavItemClick('Billing')}>Billing</li>
             <li onClick={() => handleNavItemClick('Support')}>Support</li>
           </ul>
-          <Link to="/Dashboard">X</Link>
+          <Link to="/Dashboard"><span className="material-symbols-rounded goBackIcon">
+                                keyboard_backspace
+                                </span></Link>
         </div>
         <div className='settingsContent'>
         <div className='settingsEditPlace'>

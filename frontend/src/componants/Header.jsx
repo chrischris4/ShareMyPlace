@@ -21,7 +21,9 @@ function Header(){
                 <Link to="/Dashboard">
                 <p>{t('headerLogin')}</p>
                         </Link>
-                    <button className='headerButton' >{t('headerButton')}</button>
+                    <button className='headerButton' >{t('headerButton')}<span className="material-symbols-rounded editIcon">
+edit_square
+</span></button>
                 </div>
             </div>
         </div>
