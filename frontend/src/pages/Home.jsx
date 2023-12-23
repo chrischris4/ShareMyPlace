@@ -1,5 +1,5 @@
 import Header from '../componants/Header';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../styles/Home.css'
 import { useTranslation } from 'react-i18next';
 
@@ -30,6 +30,21 @@ function Home(){
           showSignUpPlaceSection(); // Fermer la modal signupPlace
         }
       };
+
+    const [languages, setLanguages] = useState([]);
+    const [currencies, setCurrencies] = useState([]);
+
+    useEffect(() => {
+        // Récupérer les données pour les langues
+        fetch('https://share-my-place.enlightenment-idea.com/api/languages')
+          .then(response => response.json())
+          .then(data => setLanguages(data.data));
+    
+        // Récupérer les données pour les devises
+        fetch('https://share-my-place.enlightenment-idea.com/api/currencies')
+          .then(response => response.json())
+          .then(data => setCurrencies(data.data));
+      }, []);
 
 
     return(
@@ -77,15 +92,15 @@ function Home(){
                                     </select>
                                     <label htmlFor="">{t('signUpPlaceCurrency')}</label>
                                     <select required>
-                                        <option value=""></option>
-                                        <option value="euro">€</option>
-                                        <option value="dollar">$</option>
+                                    {currencies.map(currency => (
+                                        <option key={currency.id} value={currency.name}>{currency.name}</option>
+                                        ))}
                                     </select>
                                     <label htmlFor="">{t('signUpPlaceLanguage')}</label>
                                     <select required>
-                                        <option value=""></option>
-                                        <option value="fr">Francais</option>
-                                        <option value="en">English</option>
+                                    {languages.map(language => (
+                                        <option key={language.id} value={language.name}>{language.name}</option>
+                                        ))}
                                     </select>
                                     <button className='addPlaceButton'>{t('signUpPlaceButton')}</button>
                                 </form>
